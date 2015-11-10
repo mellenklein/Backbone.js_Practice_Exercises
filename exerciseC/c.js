@@ -19,6 +19,15 @@ var BlogPosts = Backbone.Collection.extend({
  //          VIEWS            //
 ///////////////////////////////
 
+var HomePage = Backbone.View.extend({
+  template: _.template($('#homePageTemplate').html()),
+  render: function(){
+    this.$el.html(this.template());
+    return this;
+  }
+});
+
+
 var PostView = Backbone.View.extend({
   tagName: 'article',
   className: 'post',
@@ -33,7 +42,7 @@ var PostView = Backbone.View.extend({
 });
 
 var FeedView = Backbone.View.extend({
-  tagName: 'section',
+  tagName: 'aside',
   className: 'feed',
 
   initialize: function(){ //when anything new is fetched on synced, automatically run the render function
@@ -53,41 +62,46 @@ var FeedView = Backbone.View.extend({
   }
 });
 
-var OpenPostView = Backbone.View.extend({
-  tagName: 'section',
-  className: 'expand',
-  template: _.template($('#openPostTemplate').html()),
-
-  events: {
-    'click .title': 'handleClickExpand'
-  },
-
-  expand: function(){ //when the title is clicked,
-    //render the new view
-    var title = this.$('.title').html();
-    var post = this.$('.post').html();
-
-    var openPost = new BlogPost();
-
-    openPostView.append.html(openPost);
-  },
-
-  handleClickExpand:function(event){
-    this.expand();
-  },
-
-  render: function(){
-    var openPostTemplate = $('#openPostTemplate').html();
-    this.$el.html(openPostTemplate);
-
-    return this;
-  }
-
-});
+// var OpenPostView = Backbone.View.extend({
+//   tagName: 'section',
+//   className: 'expand',
+//   template: _.template($('#openPostTemplate').html()),
+//
+//   events: {
+//     'click .title': 'handleClickExpand'
+//   },
+//
+//   expand: function(){ //when the title is clicked,
+//     //render the new view
+//     var title = this.$('.title').html();
+//     var post = this.$('.post').html();
+//
+//     var openPost = new BlogPost();
+//
+//     openPostView.append.html(openPost);
+//   },
+//
+//   handleClickExpand:function(event){
+//     this.expand();
+//   },
+//
+//   render: function(){
+//     var openPost = $('#openPost').html();
+//     this.$el.html(openPost);
+//
+//     return this;
+//   }
+//
+// });
 
   ///////////////////////////////
  //          RENDERING        //
 ///////////////////////////////
+
+// var view = new HomePage();
+// view.render();
+// $('main').html(view.el);
+// view.render();
 
 var postsCollection = new BlogPosts();
 
@@ -101,7 +115,7 @@ postsCollection.fetch({
   }
 });
 
-var openPostView = new OpenPostView();
-openPostView.render();
-
-$('main').append(openPostView.el);
+// var openPostView = new OpenPostView();
+// openPostView.render();
+//
+// $('main').append(openPostView.el);

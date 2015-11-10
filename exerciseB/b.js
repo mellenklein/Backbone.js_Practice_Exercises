@@ -49,7 +49,7 @@ var Form = Backbone.View.extend({
     }
 
     var user = new User({  //instance: create an object to be saved in server
-      name: first,
+      name: first + " " + last,
       address: address,
       phone: phone,
     });

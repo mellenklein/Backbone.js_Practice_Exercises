@@ -1,0 +1,49 @@
+body {
+  margin: 0 auto;
+}
+
+.form {
+  margin: 20px;
+  width: 30%;
+  float: left;
+  /*display: inline;*/
+  &::after {
+    content: '';
+    clear: both;
+    display: inline;
+  }
+}
+
+input {
+  /*display: block;*/
+  margin: 20px;
+  font-size: 1.4em;
+  padding: 5px;
+  /*width: 35%;*/
+}
+
+
+.send {
+  /*display: block;*/
+  margin: 0 50px;
+  background: #F16059;
+  border: 1px solid gray;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.urlList {
+  margin: 20px;
+  width: 30%;
+  float: left;
+  clear: none;
+}
+
+.tagList {
+  margin: 20px 0;
+  width: 30%;
+  float: left;
+  clear: none;
+}

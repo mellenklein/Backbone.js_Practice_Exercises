@@ -3,9 +3,32 @@
   <head>
     <meta charset="utf-8">
     <title>Exercise D - Backbone Practice</title>
+    <link rel="stylesheet" href="d.css">
   </head>
   <body>
 
+    <main>
+
+    </main>
+    <script type="text/template" id="formTemplate">
+      <input type="text" class="link" placeholder="http://..."/>
+      <input type="text" class="title" placeholder="Title"/>
+      <input type="text" class="tag" placeholder="Tag your URL"/>
+      <input type="button" class="send" value="Save"/>
+    </script>
+
+    <script type="text/template" id="linkViewTemplate">
+      <h3> <%= link %> </h3>
+    </script>
+
+    <script type="text/template" id="tagViewTemplate">
+      <p> <%= tag %> </p>
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
   <script src="d.js"></script>
   </body>
 </html>
