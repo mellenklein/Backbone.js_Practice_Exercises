@@ -1,0 +1,1 @@
+//Create a "blog reading app", where you have a list of blog posts on the side and when you click on a post title, it opens that post in another view. You can use the data at http://tiny-starburst.herokuapp.com/collections/posts.

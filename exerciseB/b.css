@@ -1,0 +1,23 @@
+body {
+  margin: 0 auto;
+}
+
+input {
+  display: block;
+  margin: 50px auto;
+  font-size: 1.4em;
+  padding: 5px;
+  /*width: 35%;*/
+}
+
+
+.send {
+  display: block;
+  margin: 0 auto;
+  background: #F16059;
+  border: 1px solid gray;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 1em;
+}
