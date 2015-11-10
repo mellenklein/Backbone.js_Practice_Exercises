@@ -9,7 +9,7 @@
 //Make a new MODEL, so we can save our blog post to the server:
 var BlogPost = Backbone.Model.extend({
   //use the POST method to create a new blog post and record on this url:
-  url: 'http://tiny-starburst.herokuapp.com/collections/posts'
+  url: 'http://tiny-starburst.herokuapp.com/collections/postsmel'
 });
 
   ///////////////////////////////
@@ -55,7 +55,7 @@ var Form = Backbone.View.extend({
     event.preventDefault();
     this.send();  //call the send function for this event
   },
-  
+
   render: function(){
     var formTemplate = $('#formTemplate').html();
     this.$el.html(formTemplate);
